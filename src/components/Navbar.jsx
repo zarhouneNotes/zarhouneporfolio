@@ -13,17 +13,18 @@ function Navbar({}) {
     const theme  = useTheme()
     const isMobile  = useMediaQuery(theme.breakpoints.down('sm'))
     const nav = useNavigate()
-    const [scale , setScale] = useState(true)
+    const [scale , setScale] = useState(false)
     const goToContactPage=()=>{
       nav('/contact')
+      setScale(false)
     }
   return (
     <Nvbar>
         <Logo />
         <MyList gap={4} s={scale} >
             <MLink  to={'/'}    variant='subtitle1'   onClick={()=>{setScale(false) }}     >Accueil </MLink>
-            <MLink to={'/projects'} variant='subtitle1'  onClick={()=>{setScale(false)}}   >Nos Réalisations</MLink>
-            <MLink to={'/services'} variant='subtitle1'  onClick={()=>{setScale(false)}}   >Nos Services</MLink>
+            <MLink to={'/projects'} variant='subtitle1'  onClick={()=>{setScale(false)}}   > Réalisations</MLink>
+            <MLink to={'/services'} variant='subtitle1'  onClick={()=>{setScale(false)}}   > Services</MLink>
             <MLink    to={'/about'}     variant='subtitle1'  onClick={()=>{setScale(false) }}   >    À Propos</MLink>
              {isMobile && <Button  onClick={goToContactPage}   variant='contained'>Contact</Button>}
         </MyList>
@@ -31,7 +32,7 @@ function Navbar({}) {
         <Box  onClick={()=>{setScale(!scale)}}style={{zIndex : '9' , fontSize : '24px'}}  >
             {scale ? <IoMdClose  /> :     <RxHamburgerMenu />}
         </Box>
-          :   <Button   variant='contained'onClick={()=>{setScale(false) ; goToContactPage() }} >Contact</Button>}
+          :   <Button   variant='contained'onClick={ goToContactPage } >Contact</Button>}
     </Nvbar>
   )
 }

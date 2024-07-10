@@ -10,10 +10,10 @@ import WhatIDo from './components/WhatIDo';
 import DoYouHaveIdea from './components/DoYouHaveIdea';
 import DiscussProjet from './components/DiscussProjet';
 import Footer from './components/Footer';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import PreFooter from './components/PreFooter';
 import Categories from './components/Categories';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Accueil from './pages/Accueil';
 import Aprops from './pages/Aprops';
 import ContactPage from './pages/ContactPage';
@@ -23,41 +23,25 @@ import RealisationsPage from './pages/RealisationsPage';
 
 
 function App() {
-  const heroRef = useRef()
-  const AboutRef = useRef()
-  const PortfolioRef = useRef()
-  const ServicesRef = useRef()
-  const FormRef = useRef()
+  const ref = useRef()
+
+  const location = useLocation()
+
+  useEffect(()=>{
+      ref?.current.scrollIntoView({})
+  } , [location.pathname])
 
   const GoTo = (ref)=>{
-    // 
-    // switch (ref) {
-    //   case 'heroRef':
-    //       heroRef.current.scrollIntoView({position : 'center' , behavior : 'smooth'}) 
-    //     break;
-    //   case 'AboutRef':
-    //       AboutRef.current.scrollIntoView({position : 'center' , behavior : 'smooth'})
-    //   break;
-    //   case 'PortfolioRef':
-    //       PortfolioRef.current.scrollIntoView({position : 'center' , behavior : 'smooth'})
-    //     break;
-    //   case 'ServicesRef':
-    //     ServicesRef.current.scrollIntoView({position : 'center' , behavior : 'smooth'})
-    //   break;
-    //   case 'FormRef':
-    //     FormRef.current.scrollIntoView({position : 'center' , behavior : 'smooth'})
-    //   break;
-    
-    //   default: return ;
-    //     break;
-    // }
+   
   }
 
 
 
   return (
     <Box >
-      <Navbar  />
+     <Box ref={ref}> 
+       <Navbar  />
+     </Box>
       <Routes>
         <Route path='/' element={<Accueil />}    />
         <Route path='/about' element={<Aprops />}    />

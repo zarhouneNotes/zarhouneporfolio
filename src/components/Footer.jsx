@@ -9,7 +9,7 @@ import Logo from './Logo'
 function Footer() {
     const theme = useTheme()
   return (
-   <Box bgcolor={'black'} color={'white'} p={5}>
+   <Box bgcolor={theme.palette.secondary.main} color={'white'} p={5} borderTop={"1px solid grey"}>
     <MyFooter>
         <Logo  footer={true}/>
         <MyFooter >
@@ -27,7 +27,7 @@ function Footer() {
     </MyFooter>
     <hr style={{margin : '1cm 0px'}}  />
     <MyFooter color={grey[300]}>
-    <Typography variant='body2' >Made with by PURECODE 	&#10004; </Typography>
+    <Typography variant='body2' >Made with by ZARHOUNE 	&#10004; </Typography>
     <Typography variant='body2'  > Copyright © 2024.</Typography>
 
     </MyFooter>

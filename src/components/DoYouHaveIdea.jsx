@@ -8,7 +8,7 @@ import DiscutionButton from './DiscutionButton'
 function DoYouHaveIdea() {
     const theme = useTheme()
   return (
-    <Box display={'flex'}py={'3cm'}   justifyContent={'center'}bgcolor={theme.palette.secondary.main}>
+    <Box display={'flex'}pb={'3cm'} pt={"1cm"}  justifyContent={'center'}bgcolor={theme.palette.secondary.main}>
         <Idea gap={3} >
             <Typography variant='h3' color={'white'}>
             Avez-vous une idée de projet ? Discutons de votre projet !

@@ -1,9 +1,10 @@
 import { Box, Button, Grid, Typography, useTheme } from '@mui/material'
 import { grey } from '@mui/material/colors'
-import React from 'react'
+import React, { useRef } from 'react'
 import { Line, SR } from '../StyledComponents'
 import { MdArrowForward } from 'react-icons/md'
 import WebCategorie from './WebCategorie'
+import { useInView } from 'framer-motion'
 
 export default function Categories() {
     const theme = useTheme()
@@ -25,26 +26,37 @@ export default function Categories() {
         desc : 'Transformez vos idées en réalité digitale avec notre expertise créative unique.'
     } , 
 ]
+
+  const ref = useRef()
+  const OInView = useInView(ref)
   return (
-    <Box minHeight={'100vh'}bgcolor={grey[200]} justifyContent={'center'} display={'flex'} alignItems={'center'}  >
+    <Box minHeight={'100vh'}bgcolor={grey[300]} width={"100%"} justifyContent={'center'} display={'flex'} alignItems={'center'}  >
     <Box width={'85vw'} margin={'2cm auto'}  >
         <Box  textAlign={'center'} >
             <Typography  variant='h4'>Le web sans complications : des sites web intuitifs et faciles à utiliser.</Typography>
-            <Typography color={grey[500]} mt={1} variant='body2'>ASSUREZ VOTRE PRÉSENCE EN LIGNE DE FAÇON PROFESSIONNELLE ET SÉCURISANTE POUR VOS CLIENTS</Typography>
+            <Typography color={grey[600]} mt={1} variant='body2'>ASSUREZ VOTRE PRÉSENCE EN LIGNE DE FAÇON PROFESSIONNELLE ET SÉCURISANTE POUR VOS CLIENTS</Typography>
         </Box>
         <SR justifyContent={'center'}my={4} ><Line  /></SR>
 
-         <Grid container gap={1} justifyContent={'space-evenly'} bgcolor={''}   >
+         <Grid container gap={3} justifyContent={'space-evenly'} bgcolor={''}   >
 
-            {cats.map((cat)=><WebCategorie cat={cat} />)}
+            {cats.map((cat , i)=><WebCategorie delay={(i+1)*0.4} cat={cat} />)}
                 
                
 
         </Grid>
         {/* <SR width={'100%'} mt={10}  justifyContent={'center'} bgcolor={''} >        <Button  size='large' variant='outlined'  color='secondary' endIcon={<MdArrowForward/>}  >Voir plus</Button></SR> */}
 
-        <Box bgcolor={"white"} mt={'2cm'} p={6}  borderLeft={ '4px solid'+theme.palette.primary.main}>
-            <Typography variant='subtitle1'>Chez OBROV, votre réussite est notre priorité ! Nous vous accompagnerons dans votre transformation digitale afin de vous aider à faire décoller votre business.</Typography>
+        <Box 
+         style={{
+            transform: OInView ? "none" : "scaleX(0)",
+            opacity: OInView ? 1 : 0,
+            transition: `all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s`,
+            transformOrigin :'left'
+          }}
+          
+        ref={ref} bgcolor={"white"} mt={'2cm'} p={6}  borderLeft={ '4px solid'+theme.palette.primary.main}>
+            <Typography variant='subtitle1'>votre réussite est notre priorité ! Je vous accompagne dans votre transformation digitale afin de vous aider à faire décoller votre business.</Typography>
         </Box>
 
     </Box>

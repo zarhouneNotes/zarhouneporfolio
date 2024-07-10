@@ -10,10 +10,10 @@ import DiscutionButton from '../components/DiscutionButton'
 function ServicesPage() {
     const theme = useTheme()
   return (
-    <SC bgcolor={grey[200]} alignItems={'center'} pb={8}>
-          <Box  width={'100%'} textAlign={'center'} color={'white'} py={3} bgcolor={theme.palette.secondary.dark}>
+    <SC bgcolor={grey[300]} alignItems={'center'} pb={8}>
+          {/* <Box  width={'100%'} textAlign={'center'} color={'white'} py={3} bgcolor={theme.palette.secondary.dark}>
                         <Typography variant='h5'>Nos offres contient plusieurs types des sites</Typography>
-          </Box>
+          </Box> */}
    
             {/* <ServicePage  >
                     <SC>

@@ -36,6 +36,14 @@ const myTheme = createTheme({
                     fontFamily : 'Poppins',
                 }
             }
+        },
+        MuiLink :  {
+            styleOverrides : {
+                root : {
+                    textDecoration : 'none',
+                    color : 'inherit'
+                }
+            }
         }
     
     }

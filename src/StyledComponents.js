@@ -14,6 +14,8 @@ export const SC = styled(Box)({
 
 
 export const Nvbar = styled(Box)(({theme})=>({
+    color :'white' ,
+    background : theme.palette.secondary.main,
     padding : "0px 7.5vw" , 
     height :'12vh' , 
     display :'flex' , 
@@ -38,7 +40,7 @@ export const MyList = styled(Box)(({theme , s})=>({
             right :'0px' , 
             justifyContent :'center' ,
             gap : '2cm' , 
-            background : 'whitesmoke' , 
+            background : theme.palette.secondary.dark,
             width : '80vw' , 
             scale : `${s ? 1 : 0} 1` , 
             transition : '0.4s' , 
@@ -50,17 +52,19 @@ export const MyList = styled(Box)(({theme , s})=>({
 export const MyHero = styled(Box)(({theme})=>({
     height :'88vh' , 
     display :'flex' , 
+    // flexDirection : 'row-reverse' , 
     width :'85vw' , 
     margin : 'auto' , 
     alignItems :'center' ,
     justifyContent : 'space-around' ,
     [theme.breakpoints.down('sm')] :{
+        padding : '2cm 1cm',
         justifyContent : 'center' ,
         gap : '1cm' , 
         textAlign : 'center' ,
         flexDirection : 'column-reverse' , 
-        padding : "1cm" , 
-        width :'100vw' , 
+        // padding : "1cm" , 
+        width :'100vw' , height :'fit-content' , 
         
         
         
@@ -76,7 +80,7 @@ export const Aboutme = styled(Box)(({theme})=>({
     boxShadow : '-3px 5px 50px -28px rgba(0,0,0,0.75)' , 
     display :'flex' , 
     width :'85vw' , 
-    margin :' 3cm auto' , 
+    margin :' 2cm auto' , 
     // margin : 'auto' , 
     // padding : '2cm' ,
     alignItems :'center' ,
@@ -96,10 +100,11 @@ export const Aboutme = styled(Box)(({theme})=>({
 
 export const ProcessSec = styled(Grid)(({theme})=>({
     // boxShadow : '-3px 5px 50px -28px rgba(0,0,0,0.75)' , 
-    height : '' , 
+
+    // height : '100vh' , 
     display :'flex' , 
     width :'85vw' , 
-    margin :' 2cm auto' , 
+    margin :'  auto' , 
     // margin : 'auto' , 
     // padding : '2cm' ,
     alignItems :'center' ,
@@ -179,9 +184,9 @@ export const Schedule = styled(Grid)(({theme})=>({
     padding : "2cm" ,
     display :'flex' , 
     width :'85vw' , 
-    margin :'  auto' , 
-    marginTop : '2cm' , 
-    alignItems :'' ,
+    margin :'2cm    auto' , 
+    // marginTop : '2cm' , 
+    // alignItems :'center' ,
     justifyContent : 'space-between' ,
     [theme.breakpoints.down('sm')] :{
         // flexDirection : 'column' ,
@@ -222,16 +227,18 @@ export const MyFooter = styled(Box)(({theme})=>({
     }
 }))
 
-export const Line = styled(Box)(({theme})=>({
+export const Line = styled(Box)(({theme , cl})=>({
    width  :'2cm' , 
    height : '4px',
-   background : theme.palette.primary.main
-
+   background : theme.palette.primary.main,
+   [theme.breakpoints.down('sm')] :{
+    alignSelf :cl ? 'start' :  'center' ,
+}
  }))
 
  export const ProjectImg = styled(Box)(({theme , url})=>({
     width  :'100%' , 
-    aspectRatio :'1/1', 
+    aspectRatio :'16/9', 
     background : `url(${url})`, 
     backgroundSize :'cover' ,
     // borderTopLeftRadius : "15px" , 
@@ -241,7 +248,7 @@ export const Line = styled(Box)(({theme})=>({
  
 
   export const MLink = styled(Link)(({theme})=>({
-    color :'inherit' , 
+    color : grey[300] , 
     textDecoration : 'none' , 
     // paddingBottom : "30px" ,
     // marginBottom :'-30px'
