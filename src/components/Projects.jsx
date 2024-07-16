@@ -10,24 +10,24 @@ function Projects() {
     title : "Sheez web application " ,
     desc : 'une application Web de médias sociaux où les utilisateurs peuvent faire défiler de courtes vidéos, les partager,  interagir avec elles et discuter avec les autres ' , 
     img : 'sheez',
-    url :'https://www.linkedin.com/feed/update/urn:li:activity:7213620234790862852?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7213620234790862852%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BNpn4HU8lRaSskaDzLsWGww%3D%3D'
+    url :'https://sheesapp.onrender.com/'
   } , 
   {
     title : "Evaluaction" ,
     desc : 'outil de renforcement de la politique de la digitalisation de l’administration Marocaine. Il permet un suivi régulier de l’ensemble des services publics en ligne à travers un score reflétant l’expérience des usagers' , 
     img : 'eval',
-    url :'https://www.linkedin.com/feed/update/urn:li:activity:7214317961371660289?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7214317961371660289%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BNpn4HU8lRaSskaDzLsWGww%3D%3D'
+    url :'https://evaluactionmaroc.com/'
   },{
     title : "Shuilder" ,
     desc : 'Un outil pour créer des boutiques en ligne, avec un coté admin pour gérer les  produits, les commandes et les messages des clients, le paiment en ligne est un choix..' , 
     img : 'stor',
-    url :'https://www.linkedin.com/feed/update/urn:li:activity:7213717247385571328?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7213717247385571328%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BNpn4HU8lRaSskaDzLsWGww%3D%3D'
+    url :'https://shuilder.netlify.app/'
   },
   {
     title : "Shicial" ,
     desc : "une application Web de médias sociaux où les utilisateurs peuvent partager des textes et des images, réagir aux publications et également discuter avec d'autres utilisateurs " , 
     img : 'shi',
-    url :'https://www.linkedin.com/posts/zarhoune-el-houssine-368551243_socialabrmedia-react-reactjs-activity-7213544611233890305-l3lq?utm_source=share&utm_medium=member_desktop'
+    url :'https://shicial.netlify.app/'
   }]
   return (
     <Box minHeight={'100vh'}bgcolor={grey[300]} justifyContent={'center'} display={'flex'} alignItems={'center'}  >

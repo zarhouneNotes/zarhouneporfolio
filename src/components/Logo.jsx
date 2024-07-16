@@ -14,7 +14,7 @@ function Logo({footer}) {
 
         </Box> */}
         {/* <img src={require(`../images/logo.png`)} alt="" srcset="" width='50px' /> */}
-        <Typography onClick={()=>{navigate('/')}}    letterSpacing={4} color={ footer ? 'white' :  theme.palette.primary.contrastText} variant='h4' ><b>ZARHOUNE</b></Typography>
+        <Typography onClick={()=>{navigate('/')}}    letterSpacing={3} color={ footer ? 'white' :  theme.palette.primary.contrastText} variant='h4' ><b>ZARHOUNE</b></Typography>
     </SR>
   )
 }

@@ -27,7 +27,7 @@ function Footer() {
     </MyFooter>
     <hr style={{margin : '1cm 0px'}}  />
     <MyFooter color={grey[300]}>
-    <Typography variant='body2' >Made with by ZARHOUNE 	&#10004; </Typography>
+    <Typography variant='body2' >Made by ZARHOUNE 	&#10004; </Typography>
     <Typography variant='body2'  > Copyright © 2024.</Typography>
 
     </MyFooter>
